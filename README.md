@@ -72,11 +72,11 @@ The interactive web application includes **6 pages**:
 - **Pandas, NumPy** â€” Data manipulation
 - **Scikit-learn** â€” Model training & evaluation
 - **XGBoost, LightGBM** â€” Advanced ML models
-- **SHAP** â€” Model explainability (Shapley values)
-- **Imbalanced-learn** â€” SMOTE oversampling
-- **Plotly** â€” Interactive visualizations
-- **Streamlit** â€” Web application framework
-- **Statsmodels** â€” Statistical analysis
+- **SHAP**  Model explainability (Shapley values)
+- **Imbalanced-learn**  SMOTE oversampling
+- **Plotly** Interactive visualizations
+- **Streamlit**  Web application framework
+- **Statsmodels**  Statistical analysis
 
 
 ##  License
@@ -87,4 +87,4 @@ This project is developed as a capstone project for Predictive Analytics coursew
 
 ##  Author
 
-**Capstone Project** â€” Predictive Analytics, Semester 2
+**Capstone Project**  Predictive Analytics, Semester 2
