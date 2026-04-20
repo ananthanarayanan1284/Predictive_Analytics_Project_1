@@ -40,19 +40,44 @@ def get_top_churn_drivers(shap_values, feature_names, n=10):
         drivers.append({'feature': feature, 'importance': importance, 'impact': impact})
     return pd.DataFrame(drivers)
 
-def generate_retention_insights(shap_values, feature_names,data = None):
+def generate_retention_insights(shap_values, feature_names, data=None):
     drivers = get_top_churn_drivers(shap_values, feature_names, n=15)
     insights = []
     for _, row in drivers.iterrows():
         feat = row['feature']
         if 'Contract_Two year' in feat:
-            insights.append({"strategy": "Long-term Security", "driver": feat, "action": "Incentivize month-to-month customers to switch to 2-year contracts.", "impact": "HIGH"})
+            insights.append({
+                "title": "Long-term Security", 
+                "description": "High importance of long-term contracts in preventing churn.", 
+                "action": "Incentivize month-to-month customers to switch to 2-year contracts.", 
+                "impact": "HIGH"
+            })
         elif 'tenure' in feat:
-            insights.append({"strategy": "Onboarding Focus", "driver": feat, "action": "Launch a 90-day onboarding program for new customers.", "impact": "HIGH"})
+            insights.append({
+                "title": "Onboarding Focus", 
+                "description": "Short tenure is a major driver of customer departure.", 
+                "action": "Launch a 90-day onboarding program for new customers.", 
+                "impact": "HIGH"
+            })
         elif 'Fiber optic' in feat:
-            insights.append({"strategy": "Fiber Quality Audit", "driver": feat, "action": "Investigate service quality issues for fiber optic users.", "impact": "HIGH"})
+            insights.append({
+                "title": "Fiber Quality Audit", 
+                "description": "Fiber optic service correlates with higher dissatisfaction.", 
+                "action": "Investigate service quality issues for fiber optic users.", 
+                "impact": "HIGH"
+            })
         elif 'MonthlyCharges' in feat:
-            insights.append({"strategy": "Value Optimization", "driver": feat, "action": "Review pricing tiers for high-paying customers.", "impact": "MEDIUM"})
+            insights.append({
+                "title": "Value Optimization", 
+                "description": "High monthly charges increase the likelihood of churn.", 
+                "action": "Review pricing tiers for high-paying customers.", 
+                "impact": "MEDIUM"
+            })
         elif 'Electronic check' in feat:
-            insights.append({"strategy": "Auto-Pay Migration", "driver": feat, "action": "Offer small discounts for switching to Credit Card/Bank auto-pay.", "impact": "MEDIUM"})
+            insights.append({
+                "title": "Auto-Pay Migration", 
+                "description": "Electronic check users churn more than auto-pay users.", 
+                "action": "Offer small discounts for switching to Credit Card/Bank auto-pay.", 
+                "impact": "MEDIUM"
+            })
     return insights
