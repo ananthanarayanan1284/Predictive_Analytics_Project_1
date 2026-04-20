@@ -8,8 +8,8 @@ venv/
 
 # Data & Models (ignore raw data if too large, but typically kept for school projects)
 # data/Telco-Customer-Churn.csv 
-models/*.pkl
-models/*.joblib
+#models/*.pkl
+#models/*.joblib
 
 # Jupyter
 .ipynb_checkpoints
