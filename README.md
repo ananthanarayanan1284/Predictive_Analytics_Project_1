@@ -58,6 +58,11 @@ The interactive web application includes **6 pages**:
 
 Link: "https://predictiveanalyticsproject1-p7zhzebq2yjo6orjeidt2v.streamlit.app/"
 ---
+<img width="1771" height="576" alt="Screenshot 2026-04-21 005438" src="https://github.com/user-attachments/assets/22f03278-884e-4c20-90ba-79a750819776" />
+
+<img width="1773" height="590" alt="Screenshot 2026-04-21 005553" src="https://github.com/user-attachments/assets/caca262b-8aae-4527-afd4-0c989b20d735" />
+
+<img width="1770" height="599" alt="Screenshot 2026-04-21 005615" src="https://github.com/user-attachments/assets/51b2de3c-8e8e-4918-8853-6c03e25002c1" />
 
 ##  Key Findings
 
@@ -82,10 +87,5 @@ Link: "https://predictiveanalyticsproject1-p7zhzebq2yjo6orjeidt2v.streamlit.app/
 
 ##  License
 
-This project is developed as a capstone project for Predictive Analytics coursework.
+This project is developed as a capstone project for Predictive Analytics coursework (AY 2025-2027)
 
----
-
-##  Author
-
-**Capstone Project**  Predictive Analytics, Semester 2
