@@ -3,7 +3,13 @@
 Classify telecom customers as churners or non-churners using usage behavior and demographics.
 This end-to-end ML project uses the Telco Customer Churn dataset, applies SMOTE for class imbalance, trains XGBoost and Random Forest models (alongside LR, SVM, LightGBM), and performs **SHAP analysis** for model explainability.
 The dashboard outputs actionable customer retention insights backed by model predictions.
-# Project Overview
+
+## Team Members
+- Ananthanarayanan B
+- Lanka Priya
+- Abhitha Raj S M
+  
+## Project Overview
 
 Customer churn is one of the biggest challenges in the telecom industry. 
 This project builds a Machine Learning pipeline to:
@@ -21,6 +27,19 @@ This project builds a Machine Learning pipeline to:
 - **Features:** 21 columns (demographics, services, account info)
 - **Target:** Churn (Yes/No)  ~26.5% churn rate
 
+## Exploratory Data Analysis (EDA)
+
+- **Contract Type**: Month-to-month contracts show significantly higher churn (3x) than yearly contracts.
+- **Internet Service**: Fiber optic users have a higher churn rate compared to DSL users.
+- **Tenure**: New customers (0-12 months) are at the highest risk of leaving.
+- **Payment Method**: Electronic check users demonstrate higher churn correlation.
+
+## Data Challenges
+
+- **Class Imbalance**: Churners represent only a quarter of the dataset, requiring SMOTE oversampling.
+- **Categorical Complexity**: Features like "Internet Service" and "Contract" require careful one-hot encoding.
+- **Numerical Scaling**: Monthly and Total charges require standardization for models like SVM and Logistic Regression.
+  
 ##  Models Used
 
 | Model | Description |
@@ -43,7 +62,19 @@ This project builds a Machine Learning pipeline to:
 - Accuracy, Precision, Recall, F1-Score, ROC-AUC
 - Confusion Matrix, ROC Curve, Feature Importance
 
----
+## Results
+
+The models were evaluated using ROC-AUC, F1-Score, and Recall to ensure the best identification of high-risk customers.
+
+| Model | Accuracy | Recall | F1-Score | ROC-AUC |
+|---|---|---|---|---|
+| **Random Forest ⭐** | **~0.76** | **0.72** | **0.62** | **~0.84** |
+| Logistic Regression | ~0.74 | 0.80 | 0.62 | ~0.84 |
+| Linear SVM | ~0.75 | 0.76 | 0.62 | ~0.82 |
+| XGBoost | ~0.77 | 0.58 | 0.58 | ~0.83 |
+
+> **Random Forest selected as best model** due to its superior ROC-AUC and high sensitivity to real-world high-risk profiles.
+
 
 ##  Streamlit Dashboard
 
@@ -71,6 +102,17 @@ Link: "https://predictiveanalyticsproject1-p7zhzebq2yjo6orjeidt2v.streamlit.app/
 - **Electronic check** payment method correlates with higher churn
 - **New customers (0-12 months)** are the most vulnerable segment
 - Add-on services (security, backup, support) significantly reduce churn
+
+## Data Science Life Cycle Coverage
+
+| Stage | Files / Process |
+|---|---|
+| Data Understanding | `churn_analysis.ipynb` |
+| Preprocessing | `src/data_preprocessing.py` |
+| Feature Engineering | `AvgMonthlyCharge`, `NumServices` |
+| Modeling | Random Forest, XGBoost (SMOTE applied) |
+| Interpretation | SHAP TreeExplainer |
+| Deployment | Streamlit Cloud |
 
 ##  Technologies
 
