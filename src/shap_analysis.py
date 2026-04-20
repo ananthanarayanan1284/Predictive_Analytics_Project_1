@@ -40,7 +40,7 @@ def get_top_churn_drivers(shap_values, feature_names, n=10):
         drivers.append({'feature': feature, 'importance': importance, 'impact': impact})
     return pd.DataFrame(drivers)
 
-def generate_retention_insights(shap_values, feature_names):
+def generate_retention_insights(shap_values, feature_names,data = None):
     drivers = get_top_churn_drivers(shap_values, feature_names, n=15)
     insights = []
     for _, row in drivers.iterrows():
