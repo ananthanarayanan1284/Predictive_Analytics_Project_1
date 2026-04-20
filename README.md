@@ -21,7 +21,7 @@ This project builds a Machine Learning pipeline to:
 - **Features:** 21 columns (demographics, services, account info)
 - **Target:** Churn (Yes/No)  ~26.5% churn rate
 
-## ðŸ¤– Models Used
+##  Models Used
 
 | Model | Description |
 |-------|-------------|
@@ -45,20 +45,20 @@ This project builds a Machine Learning pipeline to:
 
 ---
 
-## ðŸ–¥ï¸ Streamlit Dashboard
+##  Streamlit Dashboard
 
 The interactive web application includes **6 pages**:
 
-1. **ðŸ  Overview** â€” KPI cards, churn distribution, business insights
-2. **ðŸ“Š Exploratory Analysis** â€” Interactive charts, correlation heatmaps
-3. **ðŸ”® Predict Churn** â€” Real-time prediction with risk gauge
-4. **ðŸ“ˆ Model Performance** â€” Metrics comparison, ROC curves, confusion matrices
-5. **ðŸ§  SHAP Explainability** â€” Global/local SHAP analysis, beeswarm plots, feature dependence
-6. **ðŸ’¡ Retention Insights** â€” SHAP-backed business strategies, executive summary, priority playbook
+1. **  Overview** â€” KPI cards, churn distribution, business insights
+2. ** Exploratory Analysis** â€” Interactive charts, correlation heatmaps
+3. ** Predict Churn** â€” Real-time prediction with risk gauge
+4. ** Model Performance** â€” Metrics comparison, ROC curves, confusion matrices
+5. **  SHAP Explainability** â€” Global/local SHAP analysis, beeswarm plots, feature dependence
+6. ** Retention Insights** â€” SHAP-backed business strategies, executive summary, priority playbook
 
 ---
 
-## ðŸ“ˆ Key Findings
+##  Key Findings
 
 - **Month-to-month contracts** have 3x higher churn than yearly contracts
 - **Fiber optic customers** churn more than DSL users
@@ -66,7 +66,7 @@ The interactive web application includes **6 pages**:
 - **New customers (0-12 months)** are the most vulnerable segment
 - Add-on services (security, backup, support) significantly reduce churn
 
-## ðŸ› ï¸ Technologies
+##  Technologies
 
 - **Python 3.8+**
 - **Pandas, NumPy** â€” Data manipulation
