@@ -239,6 +239,11 @@ def make_gauge(value, title="Churn Probability"):
     return fig
 
 
+# ─── Load Data & Models ──────────────────────────────────
+df = load_raw_data()
+model, scaler, metadata, all_results = load_trained_model()
+
+
 # ─── Sidebar ─────────────────────────────────────────────
 with st.sidebar:
     st.markdown("# 📡 Churn Predictor")
@@ -288,9 +293,7 @@ def load_shap_data():
         return None
 
 
-# ─── Load Data ───────────────────────────────────────────
-df = load_raw_data()
-model, scaler, metadata, all_results = load_trained_model()
+# ─── Initialize SHAP ─────────────────────────────────────
 shap_data = load_shap_data()
 
 
