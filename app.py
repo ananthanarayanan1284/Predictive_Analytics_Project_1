@@ -251,6 +251,23 @@ with st.sidebar:
     )
     
     st.markdown("---")
+    st.markdown("### 🤖 Model Selection")
+    
+    # Model Selection Logic
+    model_names = list(all_results.keys()) if all_results else []
+    best_model_name = metadata.get('best_model_name', model_names[0] if model_names else "")
+    
+    selected_model_name = st.selectbox(
+        "Select Prediction Model",
+        options=model_names,
+        index=model_names.index(best_model_name) if best_model_name in model_names else 0,
+        help="Choose which algorithm to use for predictions. The 'Best Model' is selected by default based on ROC-AUC."
+    )
+    
+    # Store selected model globally
+    active_model = all_results[selected_model_name]['model']
+    
+    st.markdown("---")
     st.markdown("""
     <div style='text-align: center; opacity: 0.7; font-size: 12px;'>
         <p>Built with ❤️ using Streamlit</p>
@@ -638,12 +655,12 @@ elif page == "🔮 Predict Churn":
     st.markdown("Enter customer details to predict their likelihood of churning")
     st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
     
-    if model is None:
+    if active_model is None:
         st.error("⚠️ No trained model found! Please run the training pipeline first.")
         st.code("python src/model_training.py", language="bash")
         st.stop()
     
-    st.markdown(f"**Active Model:** `{metadata['best_model_name']}`")
+    st.info(f"🚀 **Currently Predicting with:** `{selected_model_name}`")
     
     # Input Form
     col1, col2, col3 = st.columns(3)
@@ -705,9 +722,9 @@ elif page == "🔮 Predict Churn":
         try:
             X_input = preprocess_single_input(input_data, scaler, metadata['feature_names'])
             
-            # Predict
-            prediction = model.predict(X_input)[0]
-            probability = model.predict_proba(X_input)[0]
+            # Predict using the ACTIVE model selected in sidebar
+            prediction = active_model.predict(X_input)[0]
+            probability = active_model.predict_proba(X_input)[0]
             churn_prob = probability[1]
             
             # Results
