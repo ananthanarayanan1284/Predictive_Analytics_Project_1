@@ -87,7 +87,7 @@ The interactive web application includes **6 pages**:
 5. **  SHAP Explainability**  Global/local SHAP analysis, beeswarm plots, feature dependence
 6. ** Retention Insights**  SHAP-backed business strategies, executive summary, priority playbook
 
-Link: "https://predictiveanalyticsproject1-p7zhzebq2yjo6orjeidt2v.streamlit.app/"
+Link: "https://predictiveanalyticsproject12.streamlit.app/"
 ---
 <img width="1771" height="576" alt="Screenshot 2026-04-21 005438" src="https://github.com/user-attachments/assets/22f03278-884e-4c20-90ba-79a750819776" />
 
