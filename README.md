@@ -7,7 +7,7 @@ The dashboard outputs actionable customer retention insights backed by model pre
 ## Team Members
 - Ananthanarayanan B
 - Lanka Priya
-- Abhitha Raj S R
+- Abhitha Raj .S .R
   
 ## Project Overview
 
