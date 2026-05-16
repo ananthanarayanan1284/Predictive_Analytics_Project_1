@@ -131,3 +131,43 @@ Link: "https://predictiveanalyticsproject12.streamlit.app/"
 
 This project is developed as a capstone project for Predictive Analytics coursework (AY 2025-2027)
 
+## Instructions for Local Setup
+
+1. Clone the repository
+
+```bash
+git clone <repository-link>
+cd Customer-Churn-Prediction
+```
+
+2. Create and activate a virtual environment
+
+### Windows
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### Linux / macOS
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. Install the required dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the Streamlit application
+
+```bash
+streamlit run app.py
+```
+
+5. Open the application in your browser
+
+```bash
+http://localhost:8501
+```
